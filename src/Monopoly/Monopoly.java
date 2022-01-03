@@ -183,6 +183,7 @@ public class Monopoly {
 	// Et on finis notre tour
 	public static void main(String[] args) throws IOException {
 	
+		
 		Monopoly monopoly = new Monopoly();
 		monopoly.plateau = new Plateau();	
 		
