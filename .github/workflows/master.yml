@@ -3,14 +3,14 @@ name: Maven Build & Sonar analysis
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     types: [opened, synchronize, reopened]
 
 jobs:
 
   build:
-    name : build master branch
+    name : build main branch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
