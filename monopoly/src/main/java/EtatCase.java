@@ -1,4 +1,4 @@
-package Monopoly;
+
 
 //Class abstract pour les differents etat
 public abstract class EtatCase {

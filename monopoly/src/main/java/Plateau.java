@@ -1,4 +1,4 @@
-package Monopoly;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,7 @@ public class Plateau {
 
 	private void creerCase() {
 		
-	    // Liste de toutes les cases propriétés 
+	    // Liste de toutes les cases propriï¿½tï¿½s 
 		
 		// Terrain(String pNom, double pPrixAchat, double pPrixMaison, double[] pLoyer)
 		
@@ -30,7 +30,7 @@ public class Plateau {
 	    
 	    CasePropriete bleuClair1 = new Terrain("Rue de Vaugirad", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
 	    CasePropriete bleuClair2 = new Terrain("Rue de Courcelles", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
-	    CasePropriete bleuClair3 = new Terrain("Avenue de la république", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
+	    CasePropriete bleuClair3 = new Terrain("Avenue de la rï¿½publique", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
 	    
 	    CasePropriete rose1 = new Terrain("Boulevard de la villette", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
 	    CasePropriete rose2 = new Terrain("Avenue de  Neuilly", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
@@ -44,7 +44,7 @@ public class Plateau {
 	    CasePropriete rouge2 = new Terrain("Boulevard Malesherbes", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
 	    CasePropriete rouge3 = new Terrain("Avenue Henri-Martin", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
 	    
-	    CasePropriete jaune1 = new Terrain("Faubourg Saint-Honoré", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
+	    CasePropriete jaune1 = new Terrain("Faubourg Saint-Honorï¿½", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
 	    CasePropriete jaune2 = new Terrain("Place de la Bourse", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
 	    CasePropriete jaune3 = new Terrain("Rue de la fayette", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
 	    
@@ -52,11 +52,11 @@ public class Plateau {
 	    CasePropriete vert2 = new Terrain("Avenue Foch", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
 	    CasePropriete vert3 = new Terrain("Boulevard des capucines", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
 	    
-	    CasePropriete bleuFonce1 = new Terrain("Avenue des Champs-Élysées", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
+	    CasePropriete bleuFonce1 = new Terrain("Avenue des Champs-ï¿½lysï¿½es", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
 	    CasePropriete bleuFonce2 = new Terrain("Rue de la paix", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
 
 	    
-	    // Ajout des propriétés sous liste pour les quartiers
+	    // Ajout des propriï¿½tï¿½s sous liste pour les quartiers
 	    List<CasePropriete> Lmarron = new ArrayList<CasePropriete>();
 	    Lmarron.add(marron1);
 	    Lmarron.add(marron2);
@@ -99,11 +99,11 @@ public class Plateau {
 	    
 	    // Les cases taxes
 	    // Param : Nom, prixAPayer
-	    CaseFixe taxe1 = new CaseFixe("Impôts sur le revenu", 200,1);
+	    CaseFixe taxe1 = new CaseFixe("Impï¿½ts sur le revenu", 200,1);
 	    CaseFixe taxe2 = new CaseFixe("Taxe de luxe", 100,1);
 
 	    // Les cases gares
-	    // Param : Nom (loyer et prixAchat sont les mêmes pour tous)
+	    // Param : Nom (loyer et prixAchat sont les mï¿½mes pour tous)
 	    Gare gare1 = new Gare("Gare Montparnasse");
 	    Gare gare2 = new Gare("Gare de lyon");
 	    Gare gare3 = new Gare("Gare du nord");
@@ -122,9 +122,9 @@ public class Plateau {
 	    gare4.quartier=gares;
 
 	    // Les cases energies
-	    // Param : Nom, PrixAchat (pourrait ne pas y être))
+	    // Param : Nom, PrixAchat (pourrait ne pas y ï¿½tre))
 	    List<CasePropriete> LEnergie = new ArrayList<CasePropriete>();
-	    Service energie1 = new Service("Compagnie de distribution d'électricité");
+	    Service energie1 = new Service("Compagnie de distribution d'ï¿½lectricitï¿½");
 	    Service energie2 = new Service("Compagnie de distribution des eaux");
 	    LEnergie.add(energie1);
 	    LEnergie.add(energie2);
@@ -134,7 +134,7 @@ public class Plateau {
 
 
 	    // Les quartiers 
-	    // Param : couleur, nombrePropriete, prixAchatMaison, prixAchatHotel, listePropriété
+	    // Param : couleur, nombrePropriete, prixAchatMaison, prixAchatHotel, listePropriï¿½tï¿½
 	    Quartier marron = new Quartier("Marron", Lmarron);
 	    marron1.quartier=marron;
 	    marron2.quartier=marron;
@@ -157,7 +157,7 @@ public class Plateau {
 	    Quartier rouge = new Quartier("Rouge",  Lrouge);
 	    Quartier jaune = new Quartier("Jaune", Ljaune);
 	    Quartier vert = new Quartier("Vert",  Lvert);
-	    Quartier bleuFonce = new Quartier("Bleu Foncé", LbleuF);
+	    Quartier bleuFonce = new Quartier("Bleu Foncï¿½", LbleuF);
 	    Quartier energie = new Quartier("Energie", LEnergie);
 	    
 	    

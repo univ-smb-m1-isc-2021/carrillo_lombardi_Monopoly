@@ -1,4 +1,4 @@
-package Monopoly;
+
 
 import java.io.IOException;
 
@@ -38,7 +38,7 @@ public abstract class CasePropriete extends Case {
 	//Change l'etat d'une case
 	public abstract void changeEtat(int i);
 	
-	//Quand on achete la case où l'on se trouve
+	//Quand on achete la case oï¿½ l'on se trouve
 	public abstract void AchatCase(Joueur j);
 
 	public double getCoutMaison() {

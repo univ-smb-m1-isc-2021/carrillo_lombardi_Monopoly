@@ -1,4 +1,4 @@
-package Monopoly;
+
 
 public class Terrain extends CasePropriete{
 	protected int nbConstruction=0;

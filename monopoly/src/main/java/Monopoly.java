@@ -1,4 +1,4 @@
-package Monopoly;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,19 +20,19 @@ public class Monopoly {
 		this.listeJoueur = new ArrayList();
 	}
 
-	//Pour améliorer les propriétés
+	//Pour amï¿½liorer les propriï¿½tï¿½s
 	public void upgradeProperties() throws IOException {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		List<Terrain> liste = currentJoueur.GetConstructible();
 		boolean upgrading = liste.size() == 0?false:true;
 		
 		while(upgrading) {
-			System.out.println("Voulez-vous améliorer une de vos propriétés?");
+			System.out.println("Voulez-vous amï¿½liorer une de vos propriï¿½tï¿½s?");
 			System.out.println("1 - Oui");
 			System.out.println("2 - Non");
 			String choice = reader.readLine();
 			if(choice.equals("1")) {
-				System.out.println("Quelle propriété voulez-vous améliorer?");
+				System.out.println("Quelle propriï¿½tï¿½ voulez-vous amï¿½liorer?");
 				System.out.println("a - annuler");
 				for(int i = 0; i < liste.size(); i++) {
 					System.out.println(i + " - " + liste.get(i).getNom());
@@ -43,7 +43,7 @@ public class Monopoly {
 				else {
 					int choix = Integer.parseInt(choice);
 					if(currentJoueur.AssezArgent(liste.get(choix).getCoutMaison())) {
-						System.out.println("Une maison est ajouté");
+						System.out.println("Une maison est ajoutï¿½");
 						System.out.println("Votre solde est " + currentJoueur.getSolde());
 						currentJoueur.Paye(liste.get(choix).getCoutMaison());
 						liste.get(choix).ConstructionMaison();
@@ -58,14 +58,14 @@ public class Monopoly {
 		}
 	}
 	
-	//Pour lancé la partie
+	//Pour lancï¿½ la partie
 	public void StartGame() throws IOException {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		
 		while(!CheckEndGame()) {
 			System.out.println("C'est au tour de " + currentJoueur.getNom());
 			System.out.println("Son solde est " + currentJoueur.getSolde());
-			System.out.println("Appuyer sur \"entrer\" pour lancer le dé");
+			System.out.println("Appuyer sur \"entrer\" pour lancer le dï¿½");
 			reader.readLine();
 			
 			if(mode == 1) {
@@ -82,7 +82,7 @@ public class Monopoly {
 		}
 	}
 	
-	//Vérifie si la partie est terminé
+	//Vï¿½rifie si la partie est terminï¿½
 	public boolean CheckEndGame() {
 		int nbJoueur = listeJoueur.size();
 		int nb = 0;
@@ -105,14 +105,14 @@ public class Monopoly {
 			currentJoueur = listeJoueur.get(i+1);
 	}
 	
-	//Fonction pour afficher le menu de création d'un joueur
+	//Fonction pour afficher le menu de crï¿½ation d'un joueur
 	public static void createPlayersMenu() {
 		System.out.println("1 - Ajouter un joueur");
 		System.out.println("2 - Lancer la partie");
 		System.out.println("3 - Quitter la partie");
 	}
 	
-	//Fonction la création d'un joueur
+	//Fonction la crï¿½ation d'un joueur
 	public static void createPlayers(Monopoly monopoly) throws IOException {
 		boolean creatingPlayer = true;
 		
@@ -136,7 +136,7 @@ public class Monopoly {
 		}
 	}
 	
-	//Fonction où l'on choisi si on est en mode de jeu normal ou en mode debug (triche)
+	//Fonction oï¿½ l'on choisi si on est en mode de jeu normal ou en mode debug (triche)
 	public static int chooseMod() throws IOException {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Choisissez votre mode de jeu");
@@ -172,23 +172,22 @@ public class Monopoly {
 	/////////////////////////////////////////////// MAIN 2 - 1 et 2 - 2 ////////////////////////////////////////////////////
 	// 2 - 1
 	// On se trouve sur Taxe de luxe et on veut aller vers la Rue de la paix
-	// Se déplacer de 1
-	// Puis on achète la case
+	// Se dï¿½placer de 1
+	// Puis on achï¿½te la case
 	// Et on finis notre tour
 	//
 	// 2 - 2
 	// On se trouve sur Taxe de luxe et on veut aller vers la Rue de la paix
 	// Il tombe sur la case de Luc, et donc paye Luc
-	// Se déplacer de 1
+	// Se dï¿½placer de 1
 	// Et on finis notre tour
 	public static void main(String[] args) throws IOException {
 	
-		
 		Monopoly monopoly = new Monopoly();
 		monopoly.plateau = new Plateau();	
 		
 		monopoly.listeJoueur.add(new Joueur("Luc", monopoly.plateau.getListeCases().get(29)));
-		monopoly.listeJoueur.add(new Joueur("Théo", monopoly.plateau.getListeCases().get(29)));
+		monopoly.listeJoueur.add(new Joueur("Thï¿½o", monopoly.plateau.getListeCases().get(29)));
 		
 		monopoly.mode = 2;
 		monopoly.currentJoueur = monopoly.listeJoueur.get(0);
@@ -200,9 +199,9 @@ public class Monopoly {
 	/////////////////////////////////////////////// MAIN 2 - 3 ////////////////////////////////////////////////////
 	// 2 - 3
 	// On est Paul et on va sur la case Compagnie de distribution des eaux 
-	// Se déplacer de 1
-	// La case appartient à Théo
-	// On paye une taxe en fonction du lancé de dé et du nombre de propriété
+	// Se dï¿½placer de 1
+	// La case appartient ï¿½ Thï¿½o
+	// On paye une taxe en fonction du lancï¿½ de dï¿½ et du nombre de propriï¿½tï¿½
 	
 	/*public static void main(String[] args) throws IOException {
 	
@@ -210,7 +209,7 @@ public class Monopoly {
 		monopoly.plateau = new Plateau();	
 		
 		monopoly.listeJoueur.add(new Joueur("Luc", monopoly.plateau.getListeCases().get(29)));
-		monopoly.listeJoueur.add(new Joueur("Théo", monopoly.plateau.getListeCases().get(22)));
+		monopoly.listeJoueur.add(new Joueur("Thï¿½o", monopoly.plateau.getListeCases().get(22)));
 		monopoly.listeJoueur.add(new Joueur("Paul", monopoly.plateau.getListeCases().get(21)));
 		
 		monopoly.mode = 2;
@@ -224,7 +223,7 @@ public class Monopoly {
 	/////////////////////////////////////////////// MAIN 2 - 4  et 2 - 5 ////////////////////////////////////////////////////
 	// 2 - 4
 	// On se trouve sur Taxe de luxe et on veut aller vers la gare Montparnasse
-	// Se déplacer de 1
+	// Se dï¿½placer de 1
 	// Puis on paye Paul car la gare est deja acheter
 	// On get les constructibles
 	// Ameliorer propriete rue de la paix 1 fois
@@ -232,7 +231,7 @@ public class Monopoly {
 	//
 	// 2 - 5
 	// On se trouve sur Gare 4 et on tombe sur rue de la paix
-	// Se déplacer de 1
+	// Se dï¿½placer de 1
 	// Puis on paye Luc car la rue est deja acheter et en plus y'a une maison
 	// Et on finis notre tour
 	//

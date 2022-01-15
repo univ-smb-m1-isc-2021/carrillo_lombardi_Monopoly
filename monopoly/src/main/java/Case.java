@@ -1,4 +1,4 @@
-package Monopoly;
+
 
 import java.io.IOException;
 
@@ -6,7 +6,7 @@ public abstract class Case {
 	protected String nom;
 	public Case caseSuivante;
 	
-	//Fonction pour passé d'une case à une autre
+	//Fonction pour passï¿½ d'une case ï¿½ une autre
 	public  Case Suivante(double nb) {
 		if(nb==0) {
 			return this;

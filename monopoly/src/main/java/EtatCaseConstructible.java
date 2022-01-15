@@ -1,8 +1,8 @@
-package Monopoly;
 
-public class EtatCasePleine extends EtatCase{
 
-	public EtatCasePleine(Terrain self) {
+public class EtatCaseConstructible extends EtatCase {
+
+	public EtatCaseConstructible(Terrain self) {
 		super();
 		terrain=self;
 	}
@@ -19,26 +19,30 @@ public class EtatCasePleine extends EtatCase{
 			System.out.println("Votre nouveau solde est " + j.getSolde());
 			double tempSolde = terrain.getProprio().getSolde();
 			terrain.getProprio().Ajoute(payeTemp);
-			System.out.println("Le solde de " + terrain.getProprio().getNom() + " est passé de " + tempSolde + " à " + terrain.getProprio().getSolde());
+			System.out.println("Le solde de " + terrain.getProprio().getNom() + " est passï¿½ de " + tempSolde + " ï¿½ " + terrain.getProprio().getSolde());
 			return 0;
 		}
 	}
 
 	@Override
 	public double valeurLoyer() {
-		
-		return terrain.loyer[terrain.loyer.length-1];
+		int tempNbMaison=terrain.nbConstruction;
+		System.out.println("Il y a "+ tempNbMaison+" maison " );
+		return terrain.loyer[tempNbMaison];
 	}
 
 	@Override
 	public void actualiserEtat() {
-		// rien
+		if(this.terrain.nbConstruction==5) {
+			this.terrain.changeEtat(3);
+		}
+			
 		
 	}
 
 	@Override
 	public boolean EstConstructible() {
-		return false;
+		return true;
 	}
 
 }

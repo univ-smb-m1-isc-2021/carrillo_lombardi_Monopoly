@@ -1,4 +1,4 @@
-package Monopoly;
+
 
 public class CaseFixe extends Case {
 	//Les cases fixes sont les case de taxe

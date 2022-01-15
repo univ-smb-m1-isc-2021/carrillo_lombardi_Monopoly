@@ -1,4 +1,4 @@
-package Monopoly;
+
 
 public class EtatCaseAchete extends EtatCase {
 
@@ -19,7 +19,7 @@ public class EtatCaseAchete extends EtatCase {
 			System.out.println("Votre nouveau solde est " + j.getSolde());
 			double tempSolde = terrain.getProprio().getSolde();
 			terrain.getProprio().Ajoute(payeTemp);
-			System.out.println("Le solde de " + terrain.getProprio().getNom() + " est passé de " + tempSolde + " à " + terrain.getProprio().getSolde());
+			System.out.println("Le solde de " + terrain.getProprio().getNom() + " est passï¿½ de " + tempSolde + " ï¿½ " + terrain.getProprio().getSolde());
 			return 0;
 		}
 	}

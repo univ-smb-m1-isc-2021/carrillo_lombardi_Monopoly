@@ -1,4 +1,4 @@
-package Monopoly;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -62,7 +62,7 @@ public class Joueur {
 		if(currentCase instanceof CasePropriete) {
 			Joueur tempJ = ((CasePropriete) currentCase).getProprio();
 			if(tempJ != null)
-				System.out.println("La case appartient à " + ((CasePropriete) currentCase).getProprio().getNom());
+				System.out.println("La case appartient ï¿½ " + ((CasePropriete) currentCase).getProprio().getNom());
 			else
 				System.out.println("La case est libre");
 		}

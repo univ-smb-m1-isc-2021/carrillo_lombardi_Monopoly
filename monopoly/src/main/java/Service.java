@@ -1,4 +1,4 @@
-package Monopoly;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,8 +18,8 @@ public class Service extends CasePropriete {
 		double aPayer = loyer[0];
 		Joueur j = proprio;
 		
-		System.out.println("Le loyer dépend de votre lancer de dé (150 * " + loyer[j.GetNbPropriete("Energie") - 1] + " * valeur du dé)");
-		System.out.println("Appuyer sur \"entrer\" pour lancer le dé");
+		System.out.println("Le loyer dï¿½pend de votre lancer de dï¿½ (150 * " + loyer[j.GetNbPropriete("Energie") - 1] + " * valeur du dï¿½)");
+		System.out.println("Appuyer sur \"entrer\" pour lancer le dï¿½");
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		reader.readLine();
 		
@@ -38,8 +38,8 @@ public class Service extends CasePropriete {
 		if(j.getNom().equals(this.proprio.getNom()))
 			return 0;//rien n'est fait
 		else {
-			j.Paye(valeurLoyer());
 			double aEtePayer=valeurLoyer();
+			j.Paye(aEtePayer);
 			this.proprio.Ajoute(aEtePayer);
 		}
 		return 0;

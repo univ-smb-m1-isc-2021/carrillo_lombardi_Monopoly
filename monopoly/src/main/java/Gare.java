@@ -1,4 +1,4 @@
-package Monopoly;
+
 
 public class Gare extends CasePropriete{
 	public String etat="libre";
@@ -30,7 +30,7 @@ public class Gare extends CasePropriete{
 			double tempSolde = this.getProprio().getSolde();
 			double aEtePayer=valeurLoyer();
 			this.proprio.Ajoute(aEtePayer);
-			System.out.println("Le solde de " + this.getProprio().getNom() + " est passé de " + tempSolde + " à " + this.getProprio().getSolde());
+			System.out.println("Le solde de " + this.getProprio().getNom() + " est passï¿½ de " + tempSolde + " ï¿½ " + this.getProprio().getSolde());
 			
 		}
 		

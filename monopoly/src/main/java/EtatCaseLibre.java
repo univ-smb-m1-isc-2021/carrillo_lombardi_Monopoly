@@ -1,4 +1,4 @@
-package Monopoly;
+
 
 public class EtatCaseLibre extends EtatCase {
 
