@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>monopoly</groupId>
-    <artifactId>monopoly</artifactId>
+    <groupId>carrillo_lombardi_Monopoly</groupId>
+    <artifactId>carrillo_lombardi_Monopoly</artifactId>
     <version>1.0-SNAPSHOT</version>
 
 
