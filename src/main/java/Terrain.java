@@ -1,9 +1,13 @@
 
 
 public class Terrain extends CasePropriete{
-	protected int nbConstruction=0;
+	int nbConstruction=0;
 	
-	private EtatCase etat;
+	EtatCase etat;
+
+	public EtatCase GetEtat() {
+		return etat;
+	}
 
 	public Terrain() {
 		super();
