@@ -9,8 +9,8 @@ import java.util.List;
 public class Joueur {
 	private String nom;
 	private double solde;
-	private Case currentCase;
-	private List<CasePropriete> listePropriete ;
+	Case currentCase;
+	List<CasePropriete> listePropriete ;
 	private int action;
 	
 	public Joueur(String nom, Case pCase) {

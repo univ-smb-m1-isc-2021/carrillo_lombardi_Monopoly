@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Monopoly {
 	
-	private List<Joueur> listeJoueur;
+	List<Joueur> listeJoueur;
 	private Joueur currentJoueur;
 	private Plateau plateau;
 	private int mode;
