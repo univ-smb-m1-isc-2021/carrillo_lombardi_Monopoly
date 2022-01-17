@@ -4,7 +4,21 @@
 public abstract class EtatCase {
 	protected Terrain terrain;
 	//Determine l'action de la case en fonctin de son etat
-	public abstract int ActionCase(Joueur j);
+	public int ActionCase(Joueur j) {
+		double payeTemp;
+		if(j.equals(terrain.getProprio()))
+			return 0;//rien
+		else {
+			payeTemp = valeurLoyer();
+			j.Paye(payeTemp);
+			System.out.println("Vous devez payer " + terrain.getProprio().getNom() + " d'un montant " + payeTemp + "$");
+			System.out.println("Votre nouveau solde est " + j.getSolde());
+			double tempSolde = terrain.getProprio().getSolde();
+			terrain.getProprio().Ajoute(payeTemp);
+			System.out.println("Le solde de " + terrain.getProprio().getNom() + " est pass� de " + tempSolde + " � " + terrain.getProprio().getSolde());
+			return 0;
+		}
+	}
 	//Determine la valeur du loyer en fonction de l'etat
 	public abstract double valeurLoyer();
 	//Actualiser l'etat en fonction de certain parametre qui sont necessaires pour cahnger d'etat (comme on a le max de construction)

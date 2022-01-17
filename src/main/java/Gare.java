@@ -1,7 +1,6 @@
 
 
 public class Gare extends CasePropriete{
-	public String etat="libre";
 
 	public Gare(String nom) {
 		this.nom=nom;
@@ -37,28 +36,6 @@ public class Gare extends CasePropriete{
 		return 0;
 	}
 
-	@Override
-	public void changeEtat(int i) {
-		switch (i) {
-		case 0:
-			this.etat="libre";
-			break;
-		case 1:
-			this.etat="acheter";
-			break;
 
-		default:
-			break;
-		}
-		
-	}
-
-	@Override
-	public void AchatCase(Joueur j) {
-		double tempPrix=this.prixAchat;
-		j.Paye(tempPrix);
-		setProprio(j);
-		changeEtat(1);
-	}
 	
 }

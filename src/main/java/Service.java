@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Service extends CasePropriete {
-	public String etat="libre";
 	
 	public Service(String nom) {
 		this.nom=nom;
@@ -45,28 +44,6 @@ public class Service extends CasePropriete {
 		return 0;
 	}
 
-	public void changeEtat(int i) {
-		switch (i) {
-		case 0:
-			this.etat="libre";
-			break;
-		case 1:
-			this.etat="acheter";
-			break;
 
-		default:
-			break;
-		}
-		
-	}
-
-
-	@Override
-	public void AchatCase(Joueur j) {
-		double tempPrix=this.prixAchat;
-		j.Paye(tempPrix);
-		setProprio(j);
-		this.changeEtat(1);
-	}
 
 }

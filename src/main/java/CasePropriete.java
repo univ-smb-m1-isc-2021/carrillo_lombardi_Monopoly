@@ -10,6 +10,7 @@ public abstract class CasePropriete extends Case {
 	
 	protected Joueur proprio;
 	public Quartier quartier;
+	public String etat;
 	
 
 	public double getPrixAchat() {
@@ -36,10 +37,27 @@ public abstract class CasePropriete extends Case {
 	public abstract double valeurLoyer() throws IOException;
 
 	//Change l'etat d'une case
-	public abstract void changeEtat(int i);
+	public void changeEtat(int i) {
+		switch (i) {
+		case 0:
+			this.etat="libre";
+			break;
+		case 1:
+			this.etat="acheter";
+			break;
+
+		default:
+			break;
+		}
+	}
 	
 	//Quand on achete la case o� l'on se trouve
-	public abstract void AchatCase(Joueur j);
+	public void AchatCase(Joueur j) {
+		double tempPrix=this.prixAchat;
+		j.Paye(tempPrix);
+		setProprio(j);
+		changeEtat(1);
+	}
 
 	public double getCoutMaison() {
 		return this.prixMaison;
