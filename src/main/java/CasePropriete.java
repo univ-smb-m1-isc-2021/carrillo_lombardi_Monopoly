@@ -29,7 +29,7 @@ public abstract class CasePropriete extends Case {
 	}
 
 	public Boolean EstLibre() {
-		return proprio.equals(null)?true:false;
+		return proprio==null?true:false;
 	}
 	
 	//Retourne la valeur du loyer

@@ -33,7 +33,7 @@ public class Service extends CasePropriete {
 
 	@Override
 	public int ActionCase(Joueur j) throws IOException {
-		if(etat=="libre")
+		if(etat.equals("libre"))
 			return 1;//achetable
 		if(j.getNom().equals(this.proprio.getNom()))
 			return 0;//rien n'est fait

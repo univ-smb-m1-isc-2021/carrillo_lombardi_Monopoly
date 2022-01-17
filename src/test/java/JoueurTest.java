@@ -7,14 +7,7 @@ import org.junit.jupiter.api.Test;
 
 class JoueurTest {
 
-	@Test
-	void test() {
-		
-		assertEquals(true, true);
-	}
 
-
-	
 	@Test
 	public void AchatCaseTest() {
 		Terrain t=new Terrain("Boulevard de Belleville", 2, 4, new double[] {2, 4, 6, 8, 10, 15});
