@@ -9,7 +9,7 @@ public class CoverageTest {
 	@Test
 	void CoverageTest() {
 		Coverage c = new Coverage();
-        //c.test();
+        c.test();
 		assertEquals(1, 1);
 	}
 }
